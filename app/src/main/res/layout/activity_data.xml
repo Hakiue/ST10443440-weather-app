@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/more"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".appdata">
+
+    <TextView
+        android:id="@+id/averageTemperatureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Average Temperature:"
+        android:fontFamily="@font/mainfodder"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputTemperatureEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputTemperatureEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/averageTemperatureTextView"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter temperature"
+        android:fontFamily="@font/mainfodder"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/enterButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/averageTemperatureTextView" />
+
+    <Button
+        android:id="@+id/enterButton"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/mainfodder"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputTemperatureEditText"
+        android:layout_centerHorizontal="true"
+        android:text="Enter"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/goToSecondScreenButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/clearDataButton"
+        app:layout_constraintTop_toBottomOf="@+id/inputTemperatureEditText" />
+
+    <Button
+        android:id="@+id/goToSecondScreenButton"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/mainfodder"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enterButton"
+        android:layout_centerHorizontal="true"
+        android:text="Go to Second Screen"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterButton" />
+
+    <Button
+        android:id="@+id/clearDataButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mainfodder"
+        android:layout_below="@id/goToSecondScreenButton"
+        android:layout_centerHorizontal="true"
+        android:text="Clear Data"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/goToSecondScreenButton"
+        app:layout_constraintEnd_toStartOf="@+id/enterButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputTemperatureEditText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
